@@ -8,9 +8,26 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
         <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
             <link rel="stylesheet" type="text/css" href="app/css/main.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
 
     </head>
-    <body>
+    <body> <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Résilience</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+       <li><a href="/aide">Demander</a></li>
+        <li><a href="/map">Aider</a></li>
+        <li><a href="/map">Carte</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/aide">Demander</a></li>
+        <li><a href="/map">Aider</a></li>
+        <li><a href="/map">Carte</a></li>
+  </ul>
         <div class="container">
             <!-- Page Content goes here -->
             <div class="row">
@@ -18,11 +35,11 @@
                 <div class="row">
                     <form class="col s12" action="" onsubmit="demand()"">
                         <div class="row">
-                            <div class="input-field col s6">
+                            <div class="input-field col m6 s12" >
                                 <input  id="ppl_name" type="text" class="validate" required>
                                 <label for="ppl_name">Votre nom</label>
                             </div>
-                            <div class="input-field col s6">
+                            <div class="input-field col m6 s12" >
                                 <input id="comapny_name" type="text" class="validate" required>
                                 <label for="comapny_name">Le nom de votre établissement</label>
                             </div>
@@ -82,13 +99,13 @@
                                 <span>Blouses</span>
                             </label>
                             <br>
-                            <div class="input-field col s6">
+                            <div class="input-field col m6 s12">
                                 <input id="autre" type="text" class="validate">
                                 <label for="autre">autre</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col m6">
+                            <div class="input-field col m6 s12">
                                 <input required id="contact" type="text" class="validate">
                                 <label for="contact">Votre Contact (mail, tel)</label>
                             </div>
@@ -111,6 +128,8 @@
 
         <script type="text/javascript" src="app/js/aide.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+              <script type="text/javascript" src="app/js/nav.js"></script>
+
     </body>
 
    
