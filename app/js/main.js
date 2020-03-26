@@ -1,4 +1,4 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+var map = L.map('map').setView([48.692469, 6.167432], 12);
 
 
 if (navigator.geolocation) {
@@ -11,7 +11,7 @@ if (navigator.geolocation) {
 
 function showPosition(position) {
     console.log(position);
-    map.setView([position.coords.latitude,position.coords.longitude]);
+    map.setView([position.coords.latitude,position.coords.longitude], 13);
 }
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -27,9 +27,9 @@ var geocoder = L.Control.geocoder({
     collapsed: false
 }).on('markgeocode', function(e) {
     console.log(e.geocode);
-    L.marker([e.geocode.center.lat, e.geocode.center.lng]).addTo(map)
-        .bindPopup('eeee')
-        .openPopup();
+    // L.marker([e.geocode.center.lat, e.geocode.center.lng]).addTo(map)
+    //     .bindPopup('eeee')
+    //     .openPopup();
     var bbox = e.geocode.bbox;
     var poly = L.polygon([
         bbox.getSouthEast(),
