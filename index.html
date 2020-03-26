@@ -26,14 +26,14 @@
         <li><a href="/map">Aider</a></li>
         <li><a href="/map">Carte</a></li>
   </ul> -->
-	  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Résilience</a>
+	  <nav class="green lighten-1">
+    <div class="nav-wrapper container green lighten-1">
+      <a href="/" class="brand-logo">Résilience</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
        <li><a href="/aide">Demander</a></li>
-        <li><a href="/map">Aider</a></li>
-        <li><a href="/map">Carte</a></li>
+        <li><a href="/map">Donner</a></li>
+        <li><a href="/map">Voir la carte</a></li>
       </ul>
     </div>
   </nav>
@@ -46,24 +46,44 @@
     <div class="container">
         <!-- Page Content goes here -->
         <div class="row">
-        	<h1 class="" style="text-align: center">Résilience</h1>
+        	<!-- <h1 class="" >Give&Share</h1> -->
         	<div class="col s12">
-        		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                <h4 >Résilience</h4>
+
+                <blockquote>
+                    Capacité d'un individu à supporter psychiquement les épreuves de la vie. Capacité qui lui permet de rebondir, de prendre un nouveau départ après un traumatisme
+                </blockquote>
+        		<p>Parce que la lutte contre le Cornavirus est une affaire collective et que nous avons tous un rôle à jouer en faisant preuve de solidarité.</p>
+                <p><strong>Un masque de plus pour un professionnel c’est une demi journée de plus pour assurer son service. Chaque jour compte !</strong></p>
+                <div class="row">
+            <div class="col m6 s12">
+                <a style="width:100%" class="waves-effect waves-light btn-large green lighten-1" href="/map"><i class="material-icons left">card_giftcard</i>Donner du materiel</a>
+            </div>
+            <div class="col m6 s12">
+                <a style="width:100%" class="waves-effect waves-light btn-large red" href="/aide"><i class="material-icons left">report_problem</i>Demander du matériel</a>
+            </div>
+        </div>
+                <h4 >Mobilisons nous !</h4>
+                <p>Peut être avez vous un stock de matériel à la maison ou dans votre entreprise qui peut aider ceux qui luttent au quotidien pour assurer la santé, l’alimentation et la logistique indispensable pour faire fonctionner le pays en temps de crise.</p>
+                <p>Via cette plateforme vous pouvez faire un don autour de vous ou faire un appel aux dons de matériel qui pourrait vous aider si vous êtes un professionel. </p>
+
+                 
+         <h4 >Données et Vie privée</h4>
+         <p>Cette application à été développée en Open Source par  <a href="https://github.com/lleoooell">Léo Casagrande</a> et <a href="https://github.com/olivvein?tab=repositories">Olivier Veinand</a>, uniquement dans le but de voir naitre des chaines de solidarité locales afin de protéger les professionnels qui luttent tous les jours pendant que nous sommes confinés. Toute utilisation commerciale est exclue et proscrite</p>
+         <p></p>
+         <p>Les données personnelles ne sont pas stockées et ne seront aucunement utilisées à d'autres fins que celle ci.</p>
+                                <h4 >Amis Développeurs</h4>
+
+                <p>N’hésitez pas à télécharger le code source <a href="https://github.com/lleoooell/resilience">ici</a> pour déployer cette application dans votre propre région. Il s'agit d'une simple application nodejs qui se lance en quelques commandes : </p>
+                <pre>$ git clone repo.git</pre>
+                <pre>$ cd repoFolder</pre>
+                <pre>$ npm install</pre>
+                <pre>$ bower install</pre>
+                <pre>$ node server.js</pre>
+               
         	</div>
         </div>
-         <div class="row">
-        	<div class="col s6">
-        		<a style="width:100%" class="waves-effect waves-light btn" href="/map"><i class="material-icons left">card_giftcard</i>Faire un don</a>
-        	</div>
-        	<div class="col s6">
-        		<a style="width:100%" class="waves-effect waves-light btn" href="/aide"><i class="material-icons left">card_giftcard</i>Demander du materiel</a>
-        	</div>
-        </div>
+        
       </div>
 
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

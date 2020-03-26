@@ -11,9 +11,9 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
 
     </head>
-    <body> <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Résilience</a>
+    <body> <nav class="green lighten-1">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo">Résilience</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
        <li><a href="/aide">Demander</a></li>
@@ -31,7 +31,7 @@
         <div class="container">
             <!-- Page Content goes here -->
             <div class="row">
-                <h1 class="" style="text-align: center">Demander du matériel</h1>
+                <h1 class="" style="text-align: center">Appel aux dons</h1>
                 <div class="row">
                     <form class="col s12" action="" onsubmit="demand()"">
                         <div class="row">
@@ -48,13 +48,17 @@
                             <div class="input-field col s10">
                                 <input  id="adress" type="text" class="validate autocomplete" required>
                                 <label for="adress">Votre adresse</label>
-                                <span class="helper-text" data-error="wrong" data-success="right">Entrez votre adresse et validez en cliquant sur le bouton pour voir les résultats</span>
+                                <span class="helper-text" data-error="wrong" data-success="Entrez votre adresse et validez en cliquant sur le bouton pour voir les résultats">Entrez votre adresse et validez en cliquant sur le bouton pour voir les résultats</span>
                             </div>
                             <div class="input-field col s2">
-                                <button style="width:100%" id="GeoBtn" class="waves-effect waves-light btn" ><i class="material-icons left">place</i></button>
+                                  <a id="GeoBtn" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">place</i></a>
+
+                               <!--  <button style="width:100%" id="GeoBtn" class="waves-effect waves-light btn" ><i style="text-align:center" class="material-icons left">place</i></button> -->
                             </div>
                         </div>
-                        <div id="locationsAvailable"></div>
+                       <div class="row">
+                            <div id="locationsAvailable"></div>
+                       </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <select id='secteur' required>
@@ -115,7 +119,7 @@
                                  <span class="helper-text" data-error="wrong" data-success="right">Laissez un commentaire pour expliquer les modélités de dépot</span>
                             </div>
                         </div>
-                        <button style="width:100%" class="btn waves-effect waves-light" type="submit" name="action">Valider ma demande
+                        <button style="width:100%" class="btn waves-effect waves-light green lighten-1" type="submit" name="action">Valider ma demande
                         <i class="material-icons right">send</i>
                         </button>
                     </form>

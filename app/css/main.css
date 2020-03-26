@@ -71,3 +71,25 @@ body,html{
   letter-spacing: .5px !important;
   z-index: 100000000000000 !important;
 }
+
+.cardspan{
+  /*color:red;*/
+
+}
+#back{
+  position: absolute;
+  top:100px;
+  left:10px;
+  z-index: 10000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#locationsAvailable{
+  /*height: 100px;*/
+  /*background: pink;*/
+}

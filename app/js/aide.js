@@ -19,7 +19,7 @@
       var latitude = '51.0';
       var longitude = '7.0';
 
-      var api_url = 'http://nominatim.openstreetmap.org/search'
+      var api_url = 'https://nominatim.openstreetmap.org/search'
 
       var request_url = api_url +
           '?' +
@@ -48,6 +48,7 @@
               console.log("unable to geocode! Response code: " + request.status);
               var data = JSON.parse(request.responseText);
               console.log(data.status.message);
+              alert(data);
           } else {
               console.log("server error");
           }
@@ -56,6 +57,7 @@
       request.onerror = function() {
           // There was a connection error of some sort
           console.log("unable to connect to server");
+           alert('error');
       };
 
       request.send(); // make the request
