@@ -164,6 +164,8 @@
               // Success!
               var data = JSON.parse(request.responseText);
               console.log(data);
+              document.location.href = "/map";
+
               // populateCard(data);
 
           } else if (request.status <= 500) {
