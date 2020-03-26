@@ -1,6 +1,6 @@
 var map = L.map('map').setView([48.692469, 6.167432], 12);
 
-
+var layer = L.geoJSON();
 if (navigator.geolocation) {
     test = navigator.geolocation.getCurrentPosition(showPosition);
 
@@ -40,11 +40,14 @@ var geocoder = L.Control.geocoder({
     map.fitBounds(poly.getBounds());
 }).addTo(map);
 
-getData();
+getData(map.getBounds());
 
-function getData() {
+function getData(bbox) {
+    console.log(bbox);
+    console.log(bbox._southWest);
     var request = new XMLHttpRequest();
-    request.open('GET', '/besoins', true);
+    var url = '/besoins/'+  bbox._southWest.lat + '/' + bbox._southWest.lng + '/' + bbox._northEast.lat + '/' + bbox._northEast.lng;
+    request.open('GET', url, true);
 
     request.onload = function() {
         // see full list of possible response codes:
@@ -155,7 +158,7 @@ function populateMap(data) {
 
     });
     console.log(collection);
-    L.geoJSON(collection, {
+    layer = L.geoJSON(collection, {
         // style: myStyle
         pointToLayer: createCustomIcon,
         onEachFeature: onEachFeature
@@ -235,3 +238,11 @@ legend.onAdd = function(map) {
 };
 
 legend.addTo(map);
+
+
+map.on('moveend', function(e) {
+   var bounds = map.getBounds();
+   console.log(bounds);
+   layer.clearLayers();
+   getData(bounds);
+});
