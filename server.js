@@ -73,6 +73,7 @@ app.get('/aide', function(req, res){
 
 app.use('/dist', express.static(__dirname + '/dist'));
 app.use('/app', express.static(__dirname + '/app'));
+app.use('/lib', express.static(__dirname + '/lib'));
 
 http.listen(process.env.PORT || 3000, function(){
     console.log('listening on *:',process.env.PORT || 3000);
