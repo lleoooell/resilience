@@ -181,5 +181,5 @@
           console.log("unable to connect to server");
       };
 
-      request.send(); // make the request
+      request.send(data); // make the request
   }
