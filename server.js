@@ -3,7 +3,7 @@ var app = express(); // Create express by calling the prototype in var express
 var http = require('http').createServer(app);
 
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('resilience');
+var db = new sqlite3.Database('resilience.sqlite');
 
 
 app.get("/besoins", (req, res) => {
@@ -19,7 +19,6 @@ app.get("/besoins", (req, res) => {
 app.get("/besoins/:lat1/:lng1/:lat2/:lng2/:secteur", (req, res) => {
     var params=req.params;
     const sql = "SELECT * FROM besoins WHERE lat>"+params.lat1+" AND lat<"+params.lat2+" AND lng>"+params.lng1+" AND lat<"+params.lng2 +" AND Secteur='"+params.secteur+"'";
-    console.log(sql);
     db.all(sql, (err, result) => {
         if (err) {
             return console.error(err.message);
@@ -31,7 +30,6 @@ app.get("/besoins/:lat1/:lng1/:lat2/:lng2/:secteur", (req, res) => {
 app.get("/besoins/:lat1/:lng1/:lat2/:lng2", (req, res) => {
     var params=req.params;
     const sql = "SELECT * FROM besoins WHERE lat>"+params.lat1+" AND lat<"+params.lat2+" AND lng>"+params.lng1+" AND lat<"+params.lng2;
-    console.log(sql);
     db.all(sql, (err, result) => {
         if (err) {
             return console.error(err.message);
