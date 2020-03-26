@@ -1,5 +1,7 @@
 var express = require('express'); // Get the module
 var app = express(); // Create express by calling the prototype in var express
+var https = require('https');
+var fs = require('fs');
 
 var bodyParser = require('body-parser');
 
@@ -75,6 +77,24 @@ app.use('/dist', express.static(__dirname + '/dist'));
 app.use('/app', express.static(__dirname + '/app'));
 app.use('/lib', express.static(__dirname + '/lib'));
 
+
+
+// Certificate
+const privateKey = fs.readFileSync('./keys/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('./keys/cert.pem', 'utf8');
+const ca = fs.readFileSync('./keys/chain.pem', 'utf8');
+
+const credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca
+};
+// const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
 http.listen(process.env.PORT || 3000, function(){
     console.log('listening on *:',process.env.PORT || 3000);
+});
+httpsServer.listen(443, () => {
+    console.log('HTTPS Server running on port 443');
 });
