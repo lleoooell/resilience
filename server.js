@@ -17,6 +17,18 @@ app.get("/besoins", (req, res) => {
 });
 
 
+app.get("/besoins/:lat1/:lng1/:lat2/:lng2", (req, res) => {
+    var params=req.params;
+  const sql = "SELECT * FROM besoins WHERE lat>"+params.lat1+" AND lat<"+params.lat2+" AND lng>"+params.lng1+" AND lat<"+params.lng2;
+  db.all(sql, (err, result) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    res.json(result);
+  });
+});
+
+
 app.post("/besoins", (req, res) => {
     var params=req.body;
     const sql = "INSERT INTO besoins (Nom,Addresse,Lat,Lng,MasquesFFP2,MasquesChir,Blouses,Gel,Autre,Comentaire,Contact) VALUES ("+params.Nom+","+params.Addresse+","+params.Lat+","+params.Lng+","+params.MasquesFFP2+","+params.MasquesChir+","+params.Blouses+","+params.Gel+","+params.Autre+","+params.Comentaire+","+params.Contact+")";
