@@ -1,0 +1,19 @@
+{
+  "name": "resilience_html",
+  "description": "",
+  "main": "server.js",
+  "license": "ISC",
+  "homepage": "https://github.com/lleoooell/resilience",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "nedb": "^1.6.0",
+    "leaflet": "^1.6.0"
+  }
+}
