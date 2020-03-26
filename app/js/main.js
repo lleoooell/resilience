@@ -24,7 +24,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // L.Control.geocoder().addTo(map);
 var geocoder = L.Control.geocoder({
     defaultMarkGeocode: false,
-    collapsed: false
+    collapsed: false,
+    placeholder : 'Aller à...'
 }).on('markgeocode', function(e) {
     console.log(e.geocode);
     // L.marker([e.geocode.center.lat, e.geocode.center.lng]).addTo(map)
