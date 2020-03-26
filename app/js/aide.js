@@ -151,9 +151,10 @@
   }
 
 
-  function postData(data){
+  function postData(datas){
   		var request = new XMLHttpRequest();
       request.open('POST', '/besoins', true);
+      request.setRequestHeader("Content-type", "application/json");
 
       request.onload = function() {
           // see full list of possible response codes:
@@ -181,5 +182,5 @@
           console.log("unable to connect to server");
       };
 
-      request.send(data); // make the request
+      request.send(datas); // make the request
   }
