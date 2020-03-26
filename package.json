@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lleoooell/resilience/issues"
   },
-  "homepage": "https://github.com/lleoooell/resilience#readme"
+  "homepage": "https://github.com/lleoooell/resilience#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
