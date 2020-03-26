@@ -36,7 +36,7 @@ app.get("/besoins/:lat1/:lng1/:lat2/:lng2/:secteur", (req, res) => {
 
 app.get("/besoins/:lat1/:lng1/:lat2/:lng2", (req, res) => {
     var params=req.params;
-    const sql = "SELECT * FROM besoins WHERE lat>"+params.lat1+" AND lat<"+params.lat2+" AND lng>"+params.lng1+" AND lat<"+params.lng2;
+    const sql = "SELECT * FROM besoins WHERE lat>"+params.lat1+" AND lat<"+params.lat2+" AND lng>"+params.lng1+" AND lng<"+params.lng2;
     db.all(sql, (err, result) => {
         if (err) {
             return console.error(err.message);
