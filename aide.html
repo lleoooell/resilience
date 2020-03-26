@@ -14,7 +14,7 @@
             <div class="row">
                 <h1 class="" style="text-align: center">Demander du matériel</h1>
                 <div class="row">
-                    <form class="col s12">
+                    <form class="col s12" action="" onsubmit="demand()"">
                         <div class="row">
                             <div class="input-field col s6">
                                 <input  id="ppl_name" type="text" class="validate">
@@ -38,11 +38,11 @@
                         <div id="locationsAvailable"></div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select>
+                                <select id='secteur'>
                                     <option value=""selected>Votre secteur d'activité</option>
-                                    <option value="1">Santé</option>
-                                    <option value="2">Transport</option>
-                                    <option value="3">Alimentation</option>
+                                    <option value="Santé">Santé</option>
+                                    <option value="Transport">Transport</option>
+                                    <option value="Alimentation">Alimentation</option>
                                 </select>
                                 <label>Secteur d'activité</label>
                             </div>
@@ -51,32 +51,32 @@
                         <div class="row">
                             <p>vos besoins :</p>
                             <label>
-                                <input type="checkbox"  />
+                                <input type="checkbox" id="ffp2"/>
                                 <span>Masques FFP2</span>
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox"  />
+                                <input type="checkbox" id="chir"  />
                                 <span>Masques chirurgicaux</span>
                             </label>
                             <br>
-                            <label>
+                            <!-- <label>
                                 <input type="checkbox"  />
                                 <span>Masques chirurgicaux</span>
-                            </label>
-                            <br>
+                            </label> -->
+                            <!-- <br> -->
                             <label>
-                                <input type="checkbox"  />
+                                <input type="checkbox" id="gants" />
                                 <span>Gants</span>
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox"  />
+                                <input type="checkbox"  id="gel"/>
                                 <span>Gel Hydroalcoolique</span>
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox"  />
+                                <input type="checkbox" id="blouses"  />
                                 <span>Blouses</span>
                             </label>
                             <br>
