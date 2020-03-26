@@ -10,6 +10,9 @@ app.get('/', function(req, res){
 app.get('/map', function(req, res){
    res.sendFile(__dirname + '/map.html');
 });
+app.get('/aide', function(req, res){
+   res.sendFile(__dirname + '/aide.html');
+});
 
 
 app.use('/dist', express.static(__dirname + '/dist'));
