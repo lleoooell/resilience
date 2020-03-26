@@ -40,7 +40,7 @@ app.get("/besoins/:lat1/:lng1/:lat2/:lng2", (req, res) => {
 
 app.post("/besoins", (req, res) => {
     var params=req.body;
-    const sql = "INSERT INTO besoins (Nom,Addresse,Lat,Lng,MasquesFFP2,MasquesChir,Blouses,Gel,Autre,Commentaire,Contact,Secteur) VALUES ("+params.Nom+","+params.Addresse+","+params.Lat+","+params.Lng+","+params.MasquesFFP2+","+params.MasquesChir+","+params.Blouses+","+params.Gel+","+params.Autre+","+params.Commentaire+","+params.Contact+","+params.Secteur+")";
+    const sql = "INSERT INTO besoins (Nom,Addresse,Lat,Lng,MasquesFFP2,MasquesChir,Blouses,Gel,Autre,Commentaire,Contact,Secteur,Company,Gant) VALUES ("+params.Nom+","+params.Addresse+","+params.Lat+","+params.Lng+","+params.MasquesFFP2+","+params.MasquesChir+","+params.Blouses+","+params.Gel+","+params.Autre+","+params.Commentaire+","+params.Contact+","+params.Secteur+","+params.Company+","+params.Gant+")";
     db.run(sql, function(err) {
         if (err) {
             return console.log(err.message);
