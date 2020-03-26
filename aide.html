@@ -19,17 +19,17 @@
                     <form class="col s12" action="" onsubmit="demand()"">
                         <div class="row">
                             <div class="input-field col s6">
-                                <input  id="ppl_name" type="text" class="validate">
+                                <input  id="ppl_name" type="text" class="validate" required>
                                 <label for="ppl_name">Votre nom</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="comapny_name" type="text" class="validate">
+                                <input id="comapny_name" type="text" class="validate" required>
                                 <label for="comapny_name">Le nom de votre établissement</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <input  id="adress" type="text" class="validate autocomplete">
+                                <input  id="adress" type="text" class="validate autocomplete" required>
                                 <label for="adress">Votre adresse</label>
                                 <span class="helper-text" data-error="wrong" data-success="right">Entrez votre adresse et validez en cliquant sur le bouton pour voir les résultats</span>
                             </div>
@@ -40,7 +40,7 @@
                         <div id="locationsAvailable"></div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select id='secteur'>
+                                <select id='secteur' required>
                                     <option value=""selected>Votre secteur d'activité</option>
                                     <option value="Santé">Santé</option>
                                     <option value="Transport">Transport</option>
@@ -89,11 +89,11 @@
                         </div>
                         <div class="row">
                             <div class="input-field col m6">
-                                <input id="contact" type="text" class="validate">
+                                <input required id="contact" type="text" class="validate">
                                 <label for="contact">Votre Contact (mail, tel)</label>
                             </div>
                             <div class="input-field col m6">
-                                <textarea id="comment" type="text" class="materialize-textarea validate"></textarea>
+                                <textarea required id="comment" type="text" class="materialize-textarea validate"></textarea>
                                 <label for="comment">Modalités de dépot</label>
                                  <span class="helper-text" data-error="wrong" data-success="right">Laissez un commentaire pour expliquer les modélités de dépot</span>
                             </div>
